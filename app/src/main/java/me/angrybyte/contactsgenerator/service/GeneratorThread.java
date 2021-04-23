@@ -3,10 +3,10 @@ package me.angrybyte.contactsgenerator.service;
 
 import android.graphics.Bitmap;
 import android.os.Handler;
-import android.support.annotation.IntRange;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.Log;
+
+import androidx.annotation.IntRange;
+import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,7 @@ public class GeneratorThread extends Thread {
     private String mGender;
 
     public GeneratorThread(@NonNull Handler handler, @NonNull GeneratorService service, @IntRange(from = 0) int howMany,
-            boolean withPhotos, @Gender String gender) {
+                           boolean withPhotos, @Gender String gender) {
         super();
         mStats = new GeneratorStats();
         mStats.requested = howMany;

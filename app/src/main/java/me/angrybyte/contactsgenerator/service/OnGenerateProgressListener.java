@@ -1,8 +1,8 @@
 
 package me.angrybyte.contactsgenerator.service;
 
-import android.support.annotation.FloatRange;
-import android.support.annotation.IntRange;
+import androidx.annotation.FloatRange;
+import androidx.annotation.IntRange;
 
 public interface OnGenerateProgressListener {
 
@@ -15,6 +15,6 @@ public interface OnGenerateProgressListener {
      * @param generated How many did the generator actually generate, in most cases the same as {@code iStep}
      */
     void onGenerateProgress(@FloatRange(from = 0.0f, to = 1.0f) float progress, @IntRange(from = 0) int iStep,
-            @IntRange(from = 0) int generated);
+                            @IntRange(from = 0) int generated);
 
 }

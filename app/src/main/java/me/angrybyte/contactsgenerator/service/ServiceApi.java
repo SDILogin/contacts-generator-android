@@ -2,8 +2,9 @@
 package me.angrybyte.contactsgenerator.service;
 
 import android.content.ComponentName;
-import android.support.annotation.IntRange;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.IntRange;
+import androidx.annotation.Nullable;
 
 import me.angrybyte.contactsgenerator.api.Gender;
 import me.angrybyte.contactsgenerator.api.GeneratorStats;

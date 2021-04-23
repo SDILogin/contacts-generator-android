@@ -6,10 +6,6 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.support.annotation.FloatRange;
-import android.support.annotation.IntRange;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +15,11 @@ import android.widget.ProgressBar;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
+
+import androidx.annotation.FloatRange;
+import androidx.annotation.IntRange;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
@@ -139,7 +140,7 @@ public class ProgressActivity extends AppCompatActivity implements ServiceConnec
 
     @Override
     public void onGenerateProgress(@FloatRange(from = 0.0f, to = 1.0f) float progress, @IntRange(from = 0) int iStep,
-            @IntRange(from = 0) int generated) {
+                                   @IntRange(from = 0) int generated) {
         Person person = mService.getLastGeneratedPerson();
         if (person != null) {
             mActivityTitle.setText(mHeader);
